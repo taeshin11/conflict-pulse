@@ -1,0 +1,7 @@
+{
+  "nav": { "home": "Conflict Pulse", "about": "About" },
+  "home": {
+    "title": "Active Conflicts Around the World",
+    "subtitle": "Real-time tracking of active armed conflicts and war zones"
+  }
+}
