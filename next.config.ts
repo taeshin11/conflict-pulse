@@ -1,3 +1,5 @@
-import createNextIntlPlugin from 'next-intl/plugin'
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
-export default withNextIntl({ images: { unoptimized: true } })
+import type { NextConfig } from 'next'
+const nextConfig: NextConfig = {
+  images: { unoptimized: true }
+}
+export default nextConfig
