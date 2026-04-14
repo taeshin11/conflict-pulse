@@ -2,8 +2,29 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Conflict Pulse — Active Conflicts Worldwide",
-  description: "Track active armed conflicts and war zones worldwide with real-time updates.",
+  title: {
+    default: 'Conflict Pulse | Real-Time Intelligence',
+    template: '%s | Conflict Pulse'
+  },
+  description: 'Live pulse monitoring of global conflict intensity, escalation trends, and active war zones',
+  keywords: 'conflict pulse, war monitor, conflict escalation, global conflicts, war tracker',
+  openGraph: {
+    type: 'website',
+    siteName: 'Conflict Pulse',
+    title: 'Conflict Pulse | Real-Time Intelligence',
+    description: 'Live pulse monitoring of global conflict intensity, escalation trends, and active war zones',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Conflict Pulse',
+    description: 'Live pulse monitoring of global conflict intensity, escalation trends, and active war zones',
+  },
+  verification: {
+    google: 'add-your-google-site-verification-here',
+  },
+  other: {
+    'google-adsense-account': 'ca-pub-add-your-publisher-id-here',
+  },
 };
 
 export default function RootLayout({

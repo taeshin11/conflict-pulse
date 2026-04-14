@@ -6,6 +6,13 @@ import AdInContent from '@/components/ads/AdInContent'
 import AdMobileSticky from '@/components/ads/AdMobileSticky'
 import VisitorCounter from '@/components/VisitorCounter'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Conflict Pulse | Real-Time Conflict Intelligence',
+  description: 'Live pulse monitoring of global conflict intensity, escalation trends, and active war zones',
+  keywords: 'conflict pulse, war monitor, conflict escalation, global conflicts, war tracker',
+}
 
 const intensityOrder: Record<string, number> = { critical: 0, high: 1, medium: 2, low: 3 }
 
@@ -97,12 +104,20 @@ export default async function Home() {
       </main>
 
       <footer className="bg-slate-900 text-slate-400 mt-auto border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <div className="text-white font-bold">Conflict Pulse</div>
-            <div className="text-xs text-slate-500 mt-1">For informational purposes only.</div>
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm border-t border-slate-700 pt-6 mb-4 mt-4">
+            <a href="/about" className="hover:text-white transition-colors">About Us</a>
+            <a href="/faq" className="hover:text-white transition-colors">How to Use &amp; FAQ</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
-          <VisitorCounter />
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div className="text-white font-bold">Conflict Pulse</div>
+              <div className="text-xs text-slate-500 mt-1">For informational purposes only.</div>
+            </div>
+            <VisitorCounter />
+          </div>
         </div>
       </footer>
       <AdMobileSticky />
