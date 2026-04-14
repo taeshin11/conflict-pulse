@@ -39,6 +39,18 @@ export default function AboutPage() {
           <p className="text-slate-700">We update conflict data regularly to provide the most current information on intensity levels, recent changes, and humanitarian impacts.</p>
           <p className="text-slate-600 text-sm">Data is for informational purposes only. For emergency travel advice, consult your government&apos;s official travel advisories.</p>
         </div>
+
+        <section className="bg-white rounded-2xl border border-slate-100 p-6 mt-6">
+          <h2 className="text-2xl font-semibold text-slate-800 mb-4">Our Team &amp; Independence</h2>
+          <p className="text-slate-600 leading-relaxed mb-4">The platform was developed by a team of data engineers, journalists, and security researchers passionate about making conflict intelligence accessible to the public. Our backgrounds span open-source intelligence (OSINT), data visualization, and international security studies.</p>
+          <p className="text-slate-600 leading-relaxed">We are not affiliated with any government, military organization, or political group. Our work is funded entirely through advertising revenue, allowing us to remain independent and freely accessible to all users worldwide.</p>
+        </section>
+
+        <section className="bg-white rounded-2xl border border-slate-100 p-6 mt-6">
+          <h2 className="text-2xl font-semibold text-slate-800 mb-4">Continuous Monitoring vs. News Cycles</h2>
+          <p className="text-slate-600 leading-relaxed mb-4">Traditional news media covers conflicts reactively — a story today, silence tomorrow. Conflict Pulse provides continuous, structured monitoring that persists beyond news cycles. Where newspapers provide narrative, we provide data. Where TV coverage provides emotion, we provide quantified context.</p>
+          <p className="text-slate-600 leading-relaxed">Our structured data format makes it easy for researchers to track trends over time, compare conflicts across regions, and identify patterns that would be invisible in unstructured reporting.</p>
+        </section>
       </main>
       <footer className="bg-slate-900 text-slate-400 mt-auto border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-8">
