@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { FeedbackButton } from '@/components/FeedbackButton'
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: {
@@ -26,38 +25,33 @@ export const metadata: Metadata = {
   other: {
     'google-adsense-account': 'ca-pub-add-your-publisher-id-here',
   },
-};
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Conflict Pulse",
-              "url": "https://conflict-pulse-omega.vercel.app",
-              "description": "Live pulse monitoring of global conflict intensity, escalation trends, and active war zones",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Conflict Pulse",
-                "url": "https://conflict-pulse-omega.vercel.app"
-              }
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Conflict Pulse',
+              url: 'https://conflict-pulse-omega.vercel.app',
+              description: 'Live pulse monitoring of global conflict intensity, escalation trends, and active war zones',
+              publisher: {
+                '@type': 'Organization',
+                name: 'Conflict Pulse',
+                url: 'https://conflict-pulse-omega.vercel.app',
+              },
             })
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-slate-50">
+      <body>
         {children}
-        <FeedbackButton siteName="Conflict Pulse" siteUrl="https://conflict-pulse-omega.vercel.app" />
       </body>
     </html>
-  );
+  )
 }
