@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { FeedbackButton } from '@/components/FeedbackButton'
+import AdMobileSticky from '@/components/ads/AdMobileSticky'
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
@@ -22,6 +23,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
       {children}
+      <AdMobileSticky />
       <FeedbackButton siteName="Conflict Pulse" siteUrl="https://conflict-pulse-omega.vercel.app" />
     </NextIntlClientProvider>
   )
